@@ -12,14 +12,14 @@ namespace myHangman
         private static void PrintHangman(int wrong)
         {
             string[] hangman = {
-                    "\n+---+\n    |\n    |\n    |\n   ===",
-                    "\n+---+\no   |\n    |\n    |\n   ===",
-                    "\n+---+\no   |\n|   |\n    |\n   ===",
-                    "\n+---+\n o  |\n/|  |\n    |\n   ===",
-                    "\n+---+\n o  |\n/|\\ |\n    |\n   ===",
-                    "\n+---+\n o  |\n/|\\ |\n/   |\n   ===",
-                    "\n+---+\n o  |\n/|\\ |\n/ \\ |\n   ==="
-                };
+                        "\n+---+\n    |\n    |\n    |\n   ===",
+                        "\n+---+\no   |\n    |\n    |\n   ===",
+                        "\n+---+\no   |\n|   |\n    |\n   ===",
+                        "\n+---+\n o  |\n/|  |\n    |\n   ===",
+                        "\n+---+\n o  |\n/|\\ |\n    |\n   ===",
+                        "\n+---+\n o  |\n/|\\ |\n/   |\n   ===",
+                        "\n+---+\n o  |\n/|\\ |\n/ \\ |\n   ==="
+                    };
 
             Console.WriteLine(hangman[wrong]);
         }
@@ -77,7 +77,7 @@ namespace myHangman
                 Console.WriteLine(string.Join(" ", currentLettersGuessed));
 
                 Console.Write("\nGuess a letter: ");
-                char letterGuessed = Console.ReadLine()[0];
+                char letterGuessed = char.ToLower(Console.ReadLine()[0]);
 
                 if (currentLettersGuessed.Contains(letterGuessed))
                 {
